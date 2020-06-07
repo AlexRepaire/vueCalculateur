@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Calculateur VueJS</title>
+</head>
+<body>
+    <div class="container">
+        <div id="app">
+            <h1>Calculateur</h1>
+            <div class="result">
+                {{ result }}
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text"v-model="number1" class="form-control">
+                </div>
+                <div class="form-group">
+                    <select class="form-control" v-model="operator">
+                        <option value="plus">+</option>
+                        <option value="moins">-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" v-model="number2" class="form-control">
+    
+                </div>
+                <div class="form-group">
+                    <button v-on:click="calculer" class="btn btn-primary">Calculer</button>
+                    <button v-on:click="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
